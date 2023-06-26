@@ -4,8 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding:0px 0px 0px 20px ;
+            max-width: 1336px;
+        }
+        .burger{
+            display:none;
+            position: relative;
+            z-index: 50;
+            align-items: center;
+            width: 30px;
+            height: 13px;
+        }
+        .burger span{
+            display: block;
+            height: 2px;
+            width: 100%;
+            transform: scale(1);
+            background-color: #f4f6f2;
+           
+        }
+        .burger::before, .burger::after{
+            content: "" ;
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background-color: #f4f6f2;
+            transition: all 0.3s ease 0s;
+        }
+        .burger::before{
+            top:0;
+        }
+        .burger::after{
+            bottom: 0;
+        }
+        .burger.active span{
+            transform: scale(1);
+        }
+        .burger.active::before{
+            transform: scale(1);
+        }
+        .burger.active::after{
+            transform: scale(1);
+        }
+        @media (max-width: 1336px){
+            .burger {
+                display: flex;
+                margin-top: 12px;
+            }
+            .nav{
+             display: flex;
+             flex-direction: column;
+             position: fixed;
+             height: 100%;
+             width: 100%;
+             top: 0;
+             bottom: 0;
+             left: 0;
+             right: 0;
+             z-index: 50;
+             overflow-y: auto;
+            }
+        }
+        .open{
+            display: flex  ;
+        }
+        li{
+            list-style-type: none;
+            padding: 10px;
+            color: white;
+        }
+        ul{
+            padding: 0px 0px 0px 65px;
+            margin: 0;
+            display:flex;
+        }
+        img{
+            position: absolute;
+            width: 1336px;
+            height: 1000px;
+        }
+        .img{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-evenly;
+            box-sizing: border-box;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="img"><img src="https://sportclan.ru/wp-content/uploads/2018/03/Top-5-bukmekerskih-kontor-v-Rossii.jpg"></div>
+     <nav class="nav">
+        <ul>
+            <li>NEW ARRIVAL</li>
+            <li>MEN</li>
+            <li>WOMEN</li>
+            <li>KIDS</li>
+        </ul>
+     </nav>
+    <div  class="burger">
+        <span></span>
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        document.querySelector("burger").addEventListener("click",function(){
+            this.classList.toggle("active");
+            document.querySelector(".nav").classList.toggle("open");
+        })
+    </script>
 </body>
 </html>
