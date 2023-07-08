@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+* {
+    box-sizing: border-box;
+}
+.conteiner{
+    display: flex;
+    width: 1200px;
+    margin: 0;
+}
+#burger, [for=burger]{
+    display: none;
+}
+nav{
+    height: 650px;
+    background-color: rgba(248, 248, 255, 0.74);
+}
+@media screen and (max-width:500px){
+.conteiner{
+    width: 80%;
+}
+[for=burger]{
+    display: block;
+    position: fixed;
+    width: 30px;
+    text-align: center;
+    top: 10px;
+}
+nav{
+    display: none;
+    position: fixed;
+    top: 0;
+    margin-top: 30px;
+    background-color:ghostwhite;
+    width: 80%;
+    user-select: none;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#burger:checked + label + nav{
+    display: block;
+
+}
+}
+.box{
+    width: 1200px;
+    background-color: gainsboro;
+}
+.img1{
+    width: 24px;
+    height: 24px;
+    background-color:greenyellow;
+}
+.img2{
+    width: 24px;
+    height: 24px;
+    background-color:yellow;
+}
+.img3{
+    width: 24px;
+    height: 24px;
+    background-color: rgb(61, 61, 245);
+}
+.img4{
+    width: 24px;
+    height: 24px;
+    background-color: rgb(255, 30, 30);
+}
+img{
+    width: 12px;
+    height: 12px;
+}
+h1{
+    margin: 0;
+    width: 100%;
+}
+h6{
+    padding: 0px 0px 0px 21px;
+    margin: 0;
+    display: flex;
+}
+h2{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+h3{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.box1{
+    background-color: white;
+    padding: 10px;
+    width:15%;
+}
+.box2{
+    background-color: white;
+    padding: 10px;
+    width: 15%;
+}
+.box3{
+    background-color: white;
+    padding: 10px;
+    width: 15%;
+}
+.box4{
+    background-color: white;
+    padding: 10px;
+    width: 15%;
+}
+section{
+    display: flex;
+}
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <input type="checkbox" id="burger">
+        <label for="burger">☰</label>
+        <nav>
+            <h1>Company</h1>
+            <hr>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">User Profile</a></li>
+            <li><a href="#">Maps</a></li>
+            <li><a href="#">Notificalions</a></li>
+            <li><a href="#">Support</a></li>
+        </ul>
+        </nav>
+    <div class="box">
+            <h1>Dashboard</h1>
+            <section>
+        <div class="box1">
+                <img class="img1" src="https://cdn-icons-png.flaticon.com/512/4543/4543517.png" alt="coin">
+                <h3>Used Space</h3>
+                <h2>49/50 GB</h2>
+                <hr>
+                <img src="https://cdn-icons-png.flaticon.com/512/159/159469.png" alt="threat">
+                <h6>Get more space...</h6>
+        </div>
+        <div class="box2">
+                <img class="img2" src="https://cdn-icons-png.flaticon.com/512/5178/5178544.png" alt="shop">
+               <h3>Revenue</h3>
+                <h2>49/50 GB</h2>
+                <hr>
+                <img src="https://cdn-icons-png.flaticon.com/512/159/159469.png" alt="threat">
+                <h6>Get more space...</h6>
+        </div>
+        <div class="box3">
+                <img class="img3" src="https://cdn-icons-png.flaticon.com/512/6787/6787118.png" alt="tag">
+                <h3>Fixed Issues</h3>  
+                <h2>49/50 GB</h2>
+                <hr>
+                <img src="https://cdn-icons-png.flaticon.com/512/159/159469.png" alt="threat">
+                <h6>Get more space...</h6>
+        </div>
+        <div class="box4">
+                <img class="img4" src="https://cdn-icons-png.flaticon.com/512/4952/4952371.png" alt="airplane">
+                <h3>Fllowers</h3>
+                <h2>49/50 GB</h2>
+                <hr>
+                <img src="https://cdn-icons-png.flaticon.com/512/159/159469.png" alt="threat">
+                <h6>Get more space...</h6>
+        </div>
+</section>
+</div>
+</div>
+</body>
+</html>
