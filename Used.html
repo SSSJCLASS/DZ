@@ -4,8 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+body{
+    margin: 0;
+    min-width: 1336px;
+}
+h2{
+    margin: 0;
+    margin-left:20px ;
+}
+input{
+display: none;
+}
+img{
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+}
+.menu__box{
+    position: absolute;
+    width: 200px;
+    height: 690px;
+    margin: 0;
+    padding: 30px 0;
+    background-color: #ECEFF1;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+}
+.menu__item {
+    display: block;
+    padding: 12px 24px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+}
+.menu__item:hover {
+    background-color: rgb(255, 0, 119);
+}
+    </style>
 </head>
 <body>
-    
+    <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+        <span></span>
+        </label>
+        <ul class="menu__box">
+            <h2>Company</h2>
+            <hr>
+            <li><a class="menu__item" href="Dashboard.html"><img src="https://cdn-icons-png.flaticon.com/512/4305/4305638.png">Dashboard</a></li>
+            <li><a class="menu__item" href="#"><img src="https://cdn-icons-png.flaticon.com/512/6387/6387915.png">User Profile</a></li>
+            <li><a class="menu__item" href="#"><img src="https://cdn-icons-png.flaticon.com/512/58/58960.png">Maps</a></li>
+            <li><a class="menu__item" href="#"><img src="https://cdn-icons-png.flaticon.com/512/1280/1280891.png">Notificalions</a></li>
+            <li><a class="menu__item" href="#"><img src="https://cdn-icons-png.flaticon.com/512/1246/1246334.png">Support</a></li>
+        </ul>
 </body>
 </html>

@@ -13,7 +13,6 @@ input{
     display: none;
 }
 h1{
-    width: 200%;
     margin: 0;
 }
 h2{
@@ -31,64 +30,71 @@ h4{
     justify-content: flex-end;
     margin: 0;
 }
+h6{
+    display: flex;
+    margin: 0;
+}
 img{
     margin-right: 10px;
     width: 16px;
     height: 16px;
 }
 .img1{
+    width: 30px;
+    height: 30px;
+    padding: 20px;
+    background-color: yellowgreen;
+}
+.img2{
     margin: 0;
     width: 30px;
     height: 30px;
     padding: 20px;
-    background-color: rgb(3, 167, 3);
+    background-color: yellow;
 }
-.box1{
-    display: block;
-    width: 25%;
-    height: 20%;
-    margin: 20px;
-    z-index: 1;
-    background-color: white;
-    padding: 5px;
-    box-shadow: 6px 10px 8px #ccc;
-}
-.box2{
-    width: 25%;
-    height: 20%;
-    margin: 20px;
-    background-color: white;
-    padding: 5px;
-    box-shadow: 6px 10px 8px #ccc;
-}
-.box3{
-    width: 25%;
-    height: 20%;
-    margin: 20px;
-    background-color: white;
-    padding: 5px;
-    box-shadow: 6px 10px 8px #ccc;
-}
-.box4{
-    width: 25%;
-    height: 20%;
-    margin: 20px;
-    background-color: white;
-    padding: 5px;
-    box-shadow: 6px 10px 8px #ccc;
+.img5{
+    width: 10px;
+    height: 10px;
 }
 ul{
     margin: 0;
+}
+.parent_div{
+    display: flex;
+    margin-left: 230px ;
 }
 .container{
     padding: 25px 0 ;
     margin-left: 230px;
     width: 80%;
 }
+.container1{
+    width: 30%;
+    margin: 20px;
+    background-color: white;
+    padding: 5px;
+    box-shadow: 6px 10px 8px #ccc;
+}
 .container2{
-    display: flex;
-    margin-left: 230px;
-    width: 80%;
+    width: 30%;
+    margin: 20px;
+    background-color: white;
+    padding: 5px;
+    box-shadow: 6px 10px 8px #ccc;
+}
+.container3{
+    width: 30%;
+    margin: 20px;
+    background-color: white;
+    padding: 5px;
+    box-shadow: 6px 10px 8px #ccc;
+}
+.container4{
+    width: 30%;
+    margin: 20px;
+    background-color: white;
+    padding: 5px;
+    box-shadow: 6px 10px 8px #ccc;
 }
 .menu__box{
     position: absolute;
@@ -111,44 +117,73 @@ ul{
 .menu__item:hover {
     background-color: rgb(255, 0, 119);
 }
+@media screen and (max-width:1000px){
+.parent_div {
+    display: flex;
+    flex-wrap: wrap;
+}
+.container1{
+    width: 40%;
+    margin: 20px;
+    background-color: white;
+    padding: 5px;
+    box-shadow: 6px 10px 8px #ccc;
+}
+.container2{
+    width: 40%;
+    margin: 20px;
+    background-color: white;
+    padding: 5px;
+    box-shadow: 6px 10px 8px #ccc;
+}
+.container3{
+    width: 40%;
+    margin: 20px;
+    background-color: white;
+    padding: 5px;
+    box-shadow: 6px 10px 8px #ccc;
+}
+.container4{
+    width: 40%;
+    margin: 20px;
+    background-color: white;
+    padding: 5px;
+    box-shadow: 6px 10px 8px #ccc;
+}
+}
 @media screen and (max-width:800px){
-    .container{
+.container{
         padding: 0;
         margin-left: 60px;
-    }
-    .container2{
+}
+.parent_div {
+    margin: 0;
     display: flex;
-    width: 100%;
-    }
-    .box1{
-    display: block;
-    width: 25%;
-    height: 20%;
-    margin: 20px;
-    z-index: 1;
-    background-color: white;
-    padding: 5px;
-    box-shadow: 6px 10px 8px #ccc;
+    flex-wrap: wrap;
 }
-.box2{
-    width: 25%;
-    height: 20%;
+.container1{
+    width: 40%;
     margin: 20px;
     background-color: white;
     padding: 5px;
     box-shadow: 6px 10px 8px #ccc;
 }
-.box3{
-    width: 25%;
-    height: 20%;
+.container2{
+    width: 40%;
     margin: 20px;
     background-color: white;
     padding: 5px;
     box-shadow: 6px 10px 8px #ccc;
 }
-.box4{
-    width: 25%;
-    height: 20%;
+.container3{
+    width: 40%;
+    margin: 20px;
+    background-color: white;
+    padding: 5px;
+    box-shadow: 6px 10px 8px #ccc;
+}
+.container4{
+    width: 40%;
     margin: 20px;
     background-color: white;
     padding: 5px;
@@ -230,10 +265,12 @@ ul{
     background-color: rgb(255, 0, 119);
 }
 }
+@media screen and (max-width:500px) {
+    
+}
     </style>
 </head>
 <body>
-    <section>
         <div class="hamburger-menu">
             <input id="menu__toggle" type="checkbox" />
             <label class="menu__btn" for="menu__toggle">
@@ -242,26 +279,25 @@ ul{
             <ul class="menu__box">
                 <h2>Company</h2>
                 <hr>
-                <li><a class="menu__item" href="Dashboard.html"><img src="https://cdn-icons-png.flaticon.com/512/4305/4305638.png">Dashboard</a></li>
+                <li><a class="menu__item" href="#"><img src="https://cdn-icons-png.flaticon.com/512/4305/4305638.png">Dashboard</a></li>
                 <li><a class="menu__item" href="Used.html"><img src="https://cdn-icons-png.flaticon.com/512/6387/6387915.png">User Profile</a></li>
                 <li><a class="menu__item" href="#"><img src="https://cdn-icons-png.flaticon.com/512/58/58960.png">Maps</a></li>
                 <li><a class="menu__item" href="#"><img src="https://cdn-icons-png.flaticon.com/512/1280/1280891.png">Notificalions</a></li>
                 <li><a class="menu__item" href="#"><img src="https://cdn-icons-png.flaticon.com/512/1246/1246334.png">Support</a></li>
             </ul>
-        </section>
         <div class="container">
             <h1>Dashboard</h1>
         </div>
-        <div class="container2">
-            <div class="box1">
+        <div class="parent_div">
+            <div class="container1">
                 <img class="img1" src="https://cdn-icons-png.flaticon.com/512/158/158862.png">
                 <h4>Used Space</h4>
                 <h3>49/50 GB</h3>
                 <hr>
                 <img class="img5" src="https://cdn-icons-png.flaticon.com/512/159/159469.png">
-
+                <h6>Get more space...</h6>
             </div>
-            <div class="box2">
+            <div class="container2">
                 <img class="img2" src="https://cdn-icons-png.flaticon.com/512/2981/2981011.png">
                 <h4></h4>
                 <h3></h3>
@@ -269,7 +305,7 @@ ul{
                 <img class="img5" src="https://cdn-icons-png.flaticon.com/512/2024/2024536.png">
                 <h6></h6>
             </div>
-            <div class="box3">
+            <div class="container3">
                 <img class="img3" src="">
                 <h4></h4>
                 <h3></h3>
@@ -277,7 +313,7 @@ ul{
                 <img class="img5" src="">
                 <h6></h6>
             </div>
-            <div class="box4">
+            <div class="container4">
                 <img class="img4" src="">
                 <h4></h4>
                 <h3></h3>
